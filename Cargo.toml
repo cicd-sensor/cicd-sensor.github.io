@@ -1,0 +1,10 @@
+[package]
+name = "cicd-sensor-docs-tools"
+version = "0.0.0"
+edition = "2021"
+publish = false
+description = "Marker crate that pins mdbook tool versions so Dependabot can track them. Not a real Rust project; see the Makefile."
+
+[dependencies]
+mdbook = "=0.5.3"
+mdbook-mermaid = "=0.17.0"

@@ -32,15 +32,17 @@ jobs:
           path: source
           ref: main
 
-      - name: install mdbook
-        uses: peaceiris/actions-mdbook@ee69d230fe19748b7abf22df32acaa93833fad08 # v2.0.0
+      - name: cache mdbook tools
+        uses: actions/cache@v4
         with:
-          mdbook-version: latest
+          path: |
+            ~/.cargo/bin/mdbook
+            ~/.cargo/bin/mdbook-mermaid
+          key: mdbook-${{ runner.os }}-${{ hashFiles('site/Cargo.toml') }}
 
-      - name: install mdbook-mermaid
-        uses: taiki-e/install-action@65851e10cd6c377f11a60e600abc07cb08643468 # v2.79.3
-        with:
-          tool: mdbook-mermaid
+      - name: install mdbook tools
+        working-directory: site
+        run: make install
 
       - name: assemble book
         run: |
