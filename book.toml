@@ -1,0 +1,20 @@
+[book]
+title = "cicd-sensor"
+description = "Open-source eBPF runtime security sensor for CI/CD pipelines"
+authors = ["Hiroki Suezawa"]
+language = "en"
+# Populated at build time from cicd-sensor/cicd-sensor's docs/src/.
+# For local development, override with MDBOOK_BOOK__SRC=../cicd-sensor/docs/src
+# (scripts/dev.sh does this automatically).
+src = "build/src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/cicd-sensor/cicd-sensor"
+edit-url-template = "https://github.com/cicd-sensor/cicd-sensor/edit/main/docs/src/{path}"
+site-url = "/"
+additional-css = ["theme/css/custom.css"]
+
+[output.html.search]
+enable = true
