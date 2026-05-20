@@ -20,5 +20,9 @@ additional-js = ["theme/mermaid/mermaid.min.js", "theme/mermaid/mermaid-init.js"
 [output.html.search]
 enable = true
 
+[output.html.fold]
+enable = true
+level = 0
+
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
