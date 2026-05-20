@@ -22,7 +22,7 @@ git clone https://github.com/cicd-sensor/cicd-sensor.github.io.git
 Then from this repository:
 
 ```sh
-scripts/dev.sh
+./serve.sh
 ```
 
 `mdbook serve` opens `http://127.0.0.1:3000` with live reload on changes to:
@@ -30,7 +30,7 @@ scripts/dev.sh
 - `../cicd-sensor/docs/` (markdown content from the main repo)
 - `./theme/` (site theme owned by this repo)
 
-Override the default sibling path with `SRC=path/to/docs scripts/dev.sh`.
+Override the default sibling path with `SRC=path/to/docs ./serve.sh`.
 
 ## Deployment
 
@@ -44,6 +44,6 @@ runs `mdbook build`, and deploys the rendered book to GitHub Pages.
 | --- | --- | --- |
 | `book.toml` | this repo | mdbook configuration |
 | `theme/` | this repo | site theme overrides |
-| `scripts/dev.sh` | this repo | local live-reload preview |
+| `serve.sh` | this repo | local live-reload preview |
 | `.github/workflows/` | this repo | build and deploy pipeline |
 | `build/src/` | generated at build time | markdown copied from the main repo |

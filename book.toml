@@ -5,7 +5,7 @@ authors = ["Hiroki Suezawa"]
 language = "en"
 # Populated at build time from cicd-sensor/cicd-sensor's docs/.
 # For local development, override with MDBOOK_BOOK__SRC=../cicd-sensor/docs
-# (scripts/dev.sh does this automatically).
+# (./serve.sh does this automatically).
 src = "build/src"
 
 [output.html]
