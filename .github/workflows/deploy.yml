@@ -37,10 +37,15 @@ jobs:
         with:
           mdbook-version: latest
 
+      - name: install mdbook-mermaid
+        uses: taiki-e/install-action@v2
+        with:
+          tool: mdbook-mermaid
+
       - name: assemble book
         run: |
           mkdir -p site/build
-          cp -r source/docs/src site/build/src
+          cp -r source/docs site/build/src
 
       - name: build
         working-directory: site

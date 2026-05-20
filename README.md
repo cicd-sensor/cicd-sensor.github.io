@@ -5,7 +5,10 @@ Source for the [cicd-sensor documentation site](https://cicd-sensor.github.io/).
 This repository owns the mdbook configuration, theme, and deployment
 pipeline. The markdown content itself lives in the
 [main repository](https://github.com/cicd-sensor/cicd-sensor) under
-`docs/src/` and is pulled in at build time.
+`docs/` and is pulled in at build time.
+
+Prerequisites: `mdbook` and `mdbook-mermaid` on PATH
+(`cargo install mdbook mdbook-mermaid`).
 
 ## Local development
 
@@ -24,10 +27,10 @@ scripts/dev.sh
 
 `mdbook serve` opens `http://127.0.0.1:3000` with live reload on changes to:
 
-- `../cicd-sensor/docs/src/` (markdown content from the main repo)
+- `../cicd-sensor/docs/` (markdown content from the main repo)
 - `./theme/` (site theme owned by this repo)
 
-Override the default sibling path with `SRC=path/to/docs/src scripts/dev.sh`.
+Override the default sibling path with `SRC=path/to/docs scripts/dev.sh`.
 
 ## Deployment
 
