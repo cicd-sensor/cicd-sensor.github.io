@@ -55,6 +55,9 @@ jobs:
         working-directory: site
         run: mdbook build
 
+      - name: copy static assets
+        run: cp site/static/robots.txt site/book/robots.txt
+
       - name: tar pages artifact
         run: |
           tar \
