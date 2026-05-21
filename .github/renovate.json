@@ -1,0 +1,38 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "dependencyDashboard": false,
+  "internalChecksFilter": "strict",
+  "labels": [
+    "dependencies"
+  ],
+  "minimumReleaseAge": "7 days",
+  "separateMajorMinor": false,
+  "separateMinorPatch": false,
+  "rangeStrategy": "pin",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "before 4am on monday"
+    ]
+  },
+  "packageRules": [
+    {
+      "description": "Group Cargo updates (mdbook + mdbook-mermaid tool version pins consumed by the Makefile)",
+      "matchManagers": [
+        "cargo"
+      ],
+      "groupName": "cargo dependencies"
+    },
+    {
+      "description": "Group GitHub Actions workflow updates",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "github actions"
+    }
+  ]
+}
