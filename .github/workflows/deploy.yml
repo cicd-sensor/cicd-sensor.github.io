@@ -6,6 +6,8 @@ on:
   repository_dispatch:
     types: [cicd-sensor-docs-updated]
   workflow_dispatch:
+  schedule:
+    - cron: '5 */12 * * *'
 
 permissions:
   contents: read
