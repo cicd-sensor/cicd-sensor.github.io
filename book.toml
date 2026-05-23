@@ -6,12 +6,13 @@ language = "en"
 # Populated at build time from cicd-sensor/cicd-sensor's docs/.
 # For local development, override with MDBOOK_BOOK__SRC=../cicd-sensor/docs
 # (./serve.sh does this automatically).
-src = "build/src"
+src = "docs"
 
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/cicd-sensor/cicd-sensor"
+edit-url-template = "https://github.com/cicd-sensor/cicd-sensor/blob/main/{path}"
 site-url = "/"
 additional-css = ["theme/css/custom.css"]
 additional-js = ["theme/mermaid/mermaid.min.js", "theme/mermaid/mermaid-init.js"]

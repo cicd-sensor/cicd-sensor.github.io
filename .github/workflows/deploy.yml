@@ -47,9 +47,7 @@ jobs:
         run: make install
 
       - name: assemble book
-        run: |
-          mkdir -p site/build
-          cp -r source/docs site/build/src
+        run: cp -r source/docs site/docs
 
       - name: build
         working-directory: site

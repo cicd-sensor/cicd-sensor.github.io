@@ -1,6 +1,7 @@
 # mdbook build artifacts
 book/
 build/
+docs/
 
 # editor / OS noise
 *.bk
