@@ -1,5 +1,5 @@
 [book]
-title = "cicd-sensor"
+title = "cicd-sensor Docs"
 description = "cicd-sensor is an open-source eBPF-powered CI/CD runtime security sensor"
 authors = ["Hiroki Suezawa"]
 language = "en"
