@@ -10,7 +10,7 @@ src = "docs"
 
 [output.html]
 default-theme = "light"
-preferred-dark-theme = "navy"
+preferred-dark-theme = "coal"
 git-repository-url = "https://github.com/cicd-sensor/cicd-sensor"
 edit-url-template = "https://github.com/cicd-sensor/cicd-sensor/blob/main/{path}"
 site-url = "/"
