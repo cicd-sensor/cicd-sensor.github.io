@@ -58,6 +58,9 @@ jobs:
       - name: copy static assets
         run: cp -r site/static/. site/book/
 
+      - name: override top page title
+        run: sed -i 's|<title>[^<]*</title>|<title>cicd-sensor</title>|' site/book/index.html
+
       - name: tar pages artifact
         run: |
           tar \
