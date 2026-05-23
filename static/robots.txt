@@ -1,4 +1,3 @@
-# Allow all crawlers, including search engines and AI training bots,
-# to index and learn from the cicd-sensor documentation.
+# Allow all crawlers, including search engines and AI training bots.
 User-agent: *
 Allow: /
